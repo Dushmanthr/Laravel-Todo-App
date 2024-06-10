@@ -15,3 +15,13 @@ Route::get('/tasks', function () {
 
 
 Route::post('/saveTask', [TaskController::class, 'store']);
+
+//action button route
+Route::get('/markascompleted/{id}',[TaskController::class, 'UpdateTaskAsCompleted']);
+
+//action button state
+Route::get('/markasnotcompleted/{id}',[TaskController::class, 'UpdateTaskAsNotCompleted']);
+
+//delete task 
+Route::delete('/deletetask/{$id}', [TaskController::class, 'DeleteTask']);
+
