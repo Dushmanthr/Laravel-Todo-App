@@ -25,5 +25,9 @@ Route::get('/markasnotcompleted/{id}',[TaskController::class, 'UpdateTaskAsNotCo
 //delete task 
 Route::get('/deletetask/{id}', [TaskController::class, 'DeleteTask']);
 
-//update task
+//update task view
 Route::get('/updatetask/{id}', [TaskController::class, 'UpdateTaskView']);
+
+
+//update task view
+Route::post('/updatetasks', [TaskController::class, 'UpdateTasks']);
