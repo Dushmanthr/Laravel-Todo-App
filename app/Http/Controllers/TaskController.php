@@ -49,7 +49,7 @@ class TaskController extends Controller
 
     }
 
-    public function UpdateTask($id){
+    public function UpdateTaskView($id){
         $task = Task::find($id);
 
         return view('updatetask')->with('taskdata', $task);
